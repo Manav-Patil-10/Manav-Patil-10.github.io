@@ -3,121 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal AI OS</title>
+<title>Personal AI OS — Your own AI operating system</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Segoe UI, sans-serif; background: #0a0a0f; color: #e0e0f0; line-height: 1.6; }
-a { color: #a89ff8; text-decoration: none; }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-bottom: 1px solid #1e1e2e; position: sticky; top: 0; background: rgba(10,10,15,0.95); }
-.logo { font-size: 1.1rem; font-weight: 700; color: #7c6af7; }
-.nav-links { display: flex; gap: 28px; font-size: 0.9rem; }
-.nav-links a { color: #888899; }
-.nav-cta { background: #7c6af7; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; }
-.hero { text-align: center; padding: 100px 48px 80px; max-width: 800px; margin: 0 auto; }
-.badge { display: inline-block; background: rgba(124,106,247,0.15); border: 1px solid rgba(124,106,247,0.3); color: #a89ff8; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 24px; }
-.hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 24px; color: white; }
-.hero p { font-size: 1.1rem; color: #888899; max-width: 600px; margin: 0 auto 40px; }
-.hero-btns { display: flex; gap: 16px; justify-content: center; }
-.btn-primary { background: #7c6af7; color: white; padding: 14px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; }
-.btn-secondary { background: transparent; color: #e0e0f0; padding: 14px 32px; border-radius: 8px; font-size: 1rem; border: 1px solid #1e1e2e; }
-.install-box { background: #111118; border: 1px solid #1e1e2e; border-radius: 12px; padding: 20px 28px; max-width: 560px; margin: 48px auto 0; text-align: left; }
-.install-box p { font-size: 0.8rem; color: #888899; margin-bottom: 10px; }
-.install-cmd { font-family: monospace; font-size: 0.9rem; color: #4ecdc4; }
-.section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
-.section-label { font-size: 0.8rem; color: #7c6af7; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-.section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
-.section > p { color: #888899; margin-bottom: 48px; }
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.feature-card { background: #111118; border: 1px solid #1e1e2e; border-radius: 12px; padding: 28px; }
-.feature-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
-.feature-card p { font-size: 0.88rem; color: #888899; }
-.phases { padding: 80px 48px; background: #111118; border-top: 1px solid #1e1e2e; border-bottom: 1px solid #1e1e2e; }
-.phases-inner { max-width: 1100px; margin: 0 auto; }
-.phases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 48px; }
-.phase-item { background: #0a0a0f; border: 1px solid #1e1e2e; border-radius: 10px; padding: 20px; }
-.phase-num { font-size: 0.75rem; color: #7c6af7; font-weight: 700; margin-bottom: 6px; }
-.phase-item h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-.phase-item p { font-size: 0.82rem; color: #888899; }
-.steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
-.step-item { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid #1e1e2e; }
-.step-num { width: 40px; height: 40px; background: rgba(124,106,247,0.15); border: 1px solid rgba(124,106,247,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #7c6af7; flex-shrink: 0; }
-.step-content h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
-.step-content p { font-size: 0.88rem; color: #888899; }
-.step-code { font-family: monospace; font-size: 0.85rem; color: #4ecdc4; background: #111118; border: 1px solid #1e1e2e; padding: 8px 14px; border-radius: 6px; margin-top: 10px; display: inline-block; }
-footer { padding: 48px; border-top: 1px solid #1e1e2e; text-align: center; color: #888899; font-size: 0.88rem; }
-.footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; }
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--purple:#534AB7;--purple-light:#AFA9EC;--purple-dark:#3C3489;--teal:#1D9E75;--amber:#BA7517;--coral:#D85A30;--bg:#ffffff;--bg2:#f8f8f6;--bg3:#f1efea;--border:#e0ded8;--text:#1a1a1a;--muted:#666660}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 48px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);z-index:100}
+.logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--text)}
+.logo i{color:var(--purple);font-size:20px}
+.nav-links{display:flex;gap:24px;font-size:13px}
+.nav-links a{color:#666660}
+.nav-links a:hover{color:var(--text);text-decoration:none}
+.nav-cta{background:var(--purple);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500}
+.nav-cta:hover{background:var(--purple-dark);text-decoration:none}
+.hero{text-align:center;padding:80px 48px 64px;max-width:760px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--bg3);border:1px solid var(--border);color:#666660;padding:5px 14px;border-radius:20px;font-size:12px;margin-bottom:24px}
+.badge i{color:var(--purple);font-size:14px}
+.hero h1{font-size:42px;font-weight:500;line-height:1.15;margin-bottom:18px;color:var(--text)}
+.hero h1 span{color:var(--purple)}
+.hero p{font-size:16px;color:#666660;max-width:520px;margin:0 auto 32px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;justify-content:center;margin-bottom:36px}
+.btn-primary{background:var(--purple);color:white;padding:12px 28px;border-radius:6px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:6px}
+.btn-primary:hover{background:var(--purple-dark);text-decoration:none}
+.btn-secondary{background:var(--bg2);color:var(--text);padding:12px 28px;border-radius:6px;font-size:14px;border:1px solid var(--border);display:flex;align-items:center;gap:6px}
+.btn-secondary:hover{border-color:var(--purple);text-decoration:none}
+.install-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 20px;max-width:540px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.install-box code{font-family:monospace;font-size:12px;color:var(--teal)}
+.copy-btn{background:white;border:1px solid var(--border);color:#666660;padding:4px 12px;border-radius:4px;cursor:pointer;font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat{padding:24px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-num{font-size:28px;font-weight:500;color:var(--text);margin-bottom:4px}
+.stat-label{font-size:12px;color:#666660}
+.section{padding:72px 48px;max-width:1080px;margin:0 auto}
+.section-tag{font-size:12px;color:var(--purple);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;margin-bottom:10px}
+.section h2{font-size:28px;font-weight:500;margin-bottom:12px}
+.section>p{color:#666660;font-size:15px;max-width:540px;margin-bottom:40px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feature-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:24px;transition:border-color 0.15s}
+.feature-card:hover{border-color:var(--purple)}
+.feature-card i{font-size:22px;margin-bottom:12px;display:block}
+.feature-card h3{font-size:14px;font-weight:500;margin-bottom:6px}
+.feature-card p{font-size:13px;color:#666660;line-height:1.6}
+.phases-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 48px}
+.phases-inner{max-width:1080px;margin:0 auto}
+.phases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:40px}
+.phase-card{background:white;border:1px solid var(--border);border-radius:8px;padding:18px}
+.phase-num{font-size:11px;color:var(--purple);font-weight:600;letter-spacing:1px;margin-bottom:6px}
+.phase-card h3{font-size:13px;font-weight:500;margin-bottom:4px}
+.phase-card p{font-size:12px;color:#666660}
+.steps-section{padding:72px 48px;max-width:1080px;margin:0 auto}
+.steps{display:flex;flex-direction:column;margin-top:40px;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.step{display:flex;gap:20px;padding:24px;border-bottom:1px solid var(--border);align-items:flex-start}
+.step:last-child{border-bottom:none}
+.step-num{width:32px;height:32px;background:var(--bg3);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:var(--purple);flex-shrink:0}
+.step h3{font-size:14px;font-weight:500;margin-bottom:4px}
+.step p{font-size:13px;color:#666660;margin-bottom:8px}
+.step code{font-family:monospace;font-size:13px;color:var(--teal);background:var(--bg2);border:1px solid var(--border);padding:6px 12px;border-radius:4px;display:inline-block}
+.cta{background:var(--purple-dark);padding:72px 48px;text-align:center}
+.cta h2{font-size:28px;font-weight:500;color:white;margin-bottom:12px}
+.cta p{font-size:15px;color:var(--purple-light);margin-bottom:28px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--purple-dark);padding:12px 28px;border-radius:6px;font-size:14px;font-weight:500}
+.cta-btn:hover{background:var(--bg2);text-decoration:none}
+footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.footer-links{display:flex;gap:20px;font-size:13px}
+.footer-links a{color:#666660}
+.footer-text{font-size:13px;color:#666660}
 </style>
 </head>
 <body>
 <nav>
-  <div class="logo">Personal AI OS</div>
-  <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#phases">Phases</a>
-    <a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a>
-  </div>
-  <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="nav-cta">Get Started</a>
+  <div class="logo"><i class="ti ti-brain"></i>Personal AI OS</div>
+  <div class="nav-links"><a href="#features">Features</a><a href="#phases">Phases</a><a href="#install">Install</a><a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a></div>
+  <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="nav-cta">Get started &rarr;</a>
 </nav>
 <section class="hero">
-  <div class="badge">Open Source — Free to use</div>
-  <h1>Your Personal AI Operating System</h1>
-  <p>A self-hosted AI assistant that remembers you, learns from your notes, manages your tasks, and acts on your behalf.</p>
+  <div class="badge"><i class="ti ti-sparkles"></i>Open source &mdash; free forever</div>
+  <h1>Your personal <span>AI operating system</span></h1>
+  <p>A self-hosted assistant that remembers you, learns from your notes, manages your tasks, and acts on your behalf &mdash; built in Python, runs on your machine.</p>
   <div class="hero-btns">
-    <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="btn-primary">Get Started Free</a>
-    <a href="#features" class="btn-secondary">See Features</a>
+    <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="btn-primary"><i class="ti ti-brand-github"></i>Get started free</a>
+    <a href="#features" class="btn-secondary"><i class="ti ti-list"></i>See features</a>
   </div>
-  <div class="install-box">
-    <p>Quick install</p>
-    <div class="install-cmd">git clone https://github.com/Manav-Patil-10/personal-ai-os.git && python setup.py</div>
+  <div class="install-box" id="install">
+    <code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git &amp;&amp; python setup.py</code>
+    <button class="copy-btn" onclick="navigator.clipboard.writeText('git clone https://github.com/Manav-Patil-10/personal-ai-os.git && python setup.py');this.textContent='Copied!'">Copy</button>
   </div>
 </section>
+<div class="stats">
+  <div class="stat"><div class="stat-num">8</div><div class="stat-label">phases built</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">free &amp; open source</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-label">data sent in local mode</div></div>
+  <div class="stat"><div class="stat-num">1 cmd</div><div class="stat-label">to install</div></div>
+</div>
 <section class="section" id="features">
-  <div class="section-label">Features</div>
+  <div class="section-tag">Features</div>
   <h2>Everything your AI assistant should do</h2>
-  <p>Built in 8 progressive phases, each adding a new capability.</p>
+  <p>Each phase adds a new capability on top of the last.</p>
   <div class="features-grid">
-    <div class="feature-card"><div class="feature-icon">🧠</div><h3>Persistent Memory</h3><p>Remembers every conversation across sessions using SQLite.</p></div>
-    <div class="feature-card"><div class="feature-icon">📚</div><h3>Personal Knowledge Base</h3><p>Ask questions about your own notes — powered by RAG.</p></div>
-    <div class="feature-card"><div class="feature-icon">✅</div><h3>Natural Language Tasks</h3><p>Manage your to-do list through conversation.</p></div>
-    <div class="feature-card"><div class="feature-icon">🔀</div><h3>Multi-Agent Orchestration</h3><p>Routes requests to the right specialist agent automatically.</p></div>
-    <div class="feature-card"><div class="feature-icon">🌐</div><h3>Web Search</h3><p>Automatically searches the web for current information.</p></div>
-    <div class="feature-card"><div class="feature-icon">🔒</div><h3>Privacy Mode</h3><p>Fully local model with one flag — zero data leaves your machine.</p></div>
-    <div class="feature-card"><div class="feature-icon">📋</div><h3>Proactive Briefings</h3><p>Daily briefing generated automatically every morning.</p></div>
-    <div class="feature-card"><div class="feature-icon">💻</div><h3>Web Dashboard</h3><p>Clean browser interface — no terminal required.</p></div>
+    <div class="feature-card"><i class="ti ti-database" style="color:#534AB7"></i><h3>Persistent memory</h3><p>Remembers every conversation across sessions using SQLite.</p></div>
+    <div class="feature-card"><i class="ti ti-file-text" style="color:#1D9E75"></i><h3>Personal knowledge base</h3><p>Ask questions about your own notes powered by RAG.</p></div>
+    <div class="feature-card"><i class="ti ti-checkbox" style="color:#BA7517"></i><h3>Natural language tasks</h3><p>Manage your to-do list through conversation.</p></div>
+    <div class="feature-card"><i class="ti ti-arrows-split-2" style="color:#534AB7"></i><h3>Multi-agent orchestration</h3><p>Routes requests to the right specialist agent automatically.</p></div>
+    <div class="feature-card"><i class="ti ti-world-search" style="color:#1D9E75"></i><h3>Web search</h3><p>Automatically searches the web for current information.</p></div>
+    <div class="feature-card"><i class="ti ti-lock" style="color:#D85A30"></i><h3>Privacy mode</h3><p>Fully local model with one flag. Zero data leaves your machine.</p></div>
+    <div class="feature-card"><i class="ti ti-calendar" style="color:#BA7517"></i><h3>Proactive briefings</h3><p>Daily briefing generated automatically every morning.</p></div>
+    <div class="feature-card"><i class="ti ti-layout-dashboard" style="color:#534AB7"></i><h3>Web dashboard</h3><p>Clean browser interface. No terminal required.</p></div>
   </div>
 </section>
-<section class="phases" id="phases">
+<section class="phases-section" id="phases">
   <div class="phases-inner">
-    <div class="section-label">Built in phases</div>
+    <div class="section-tag">Built in phases</div>
     <h2>From zero to multi-agent system</h2>
     <div class="phases-grid">
-      <div class="phase-item"><div class="phase-num">PHASE 0</div><h3>CLI Assistant</h3><p>Persona switching via system prompts</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 1</div><h3>Memory</h3><p>Persistent cross-session memory with SQLite</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 2</div><h3>RAG</h3><p>Ask questions about your own notes</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 3</div><h3>Tool-calling</h3><p>Natural language task management</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 4</div><h3>Orchestration</h3><p>Multi-agent intent routing</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 5</div><h3>Proactive</h3><p>Automatic daily briefings</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 6</div><h3>Dashboard</h3><p>Web interface for everything</p></div>
-      <div class="phase-item"><div class="phase-num">PHASE 7</div><h3>Privacy</h3><p>Local model option with threat model</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 0</div><h3>CLI assistant</h3><p>Persona switching via system prompts</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 1</div><h3>Memory</h3><p>Persistent cross-session memory with SQLite</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 2</div><h3>RAG</h3><p>Ask questions about your own notes</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 3</div><h3>Tool-calling</h3><p>Natural language task management</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 4</div><h3>Orchestration</h3><p>Multi-agent intent routing</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 5</div><h3>Proactive</h3><p>Automatic daily briefings</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 6</div><h3>Dashboard</h3><p>Web interface for everything</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 7</div><h3>Privacy</h3><p>Local model option with threat model</p></div>
     </div>
   </div>
 </section>
-<section class="section">
-  <div class="section-label">Get started</div>
+<section class="steps-section">
+  <div class="section-tag">Get started</div>
   <h2>Up and running in 3 steps</h2>
   <div class="steps">
-    <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>Clone the repo</h3><p>Download the project to your computer.</p><div class="step-code">git clone https://github.com/Manav-Patil-10/personal-ai-os.git</div></div></div>
-    <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>Run setup</h3><p>Installs dependencies and sets up your API key.</p><div class="step-code">python setup.py</div></div></div>
-    <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>Start using it</h3><p>Launch the web dashboard.</p><div class="step-code">python app.py</div></div></div>
+    <div class="step"><div class="step-num">1</div><div><h3>Clone the repo</h3><p>Download the project to your computer.</p><code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git</code></div></div>
+    <div class="step"><div class="step-num">2</div><div><h3>Run the setup wizard</h3><p>Installs all dependencies and sets up your API key.</p><code>python setup.py</code></div></div>
+    <div class="step"><div class="step-num">3</div><div><h3>Start using it</h3><p>Launch the web dashboard.</p><code>python app.py</code></div></div>
   </div>
 </section>
+<section class="cta">
+  <h2>Ready to build your own AI OS?</h2>
+  <p>Free, open source, runs on your machine. Get started in 3 commands.</p>
+  <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="cta-btn"><i class="ti ti-brand-github"></i>Clone on GitHub &rarr;</a>
+</section>
 <footer>
-  <div class="footer-links">
-    <a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a>
-    <a href="https://github.com/Manav-Patil-10/personal-ai-os/blob/main/README.md">Documentation</a>
-  </div>
-  <p>Built by <a href="https://github.com/Manav-Patil-10">Manav Patil</a> — open source, free forever.</p>
+  <div class="logo"><i class="ti ti-brain"></i>Personal AI OS</div>
+  <div class="footer-links"><a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a><a href="https://github.com/Manav-Patil-10/personal-ai-os/blob/main/README.md">Docs</a><a href="https://github.com/Manav-Patil-10/personal-ai-os/issues">Issues</a></div>
+  <div class="footer-text">Built by <a href="https://github.com/Manav-Patil-10">Manav Patil</a></div>
 </footer>
 </body>
 </html>
