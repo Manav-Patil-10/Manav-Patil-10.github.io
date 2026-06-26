@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal AI OS — Your own AI operating system</title>
+<title>Mandy — Your Personal AI Assistant</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -76,20 +76,20 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
 </head>
 <body>
 <nav>
-  <div class="logo"><i class="ti ti-brain"></i>Personal AI OS</div>
+  <div class="logo"><i class="ti ti-brain"></i>Mandy</div>
   <div class="nav-links"><a href="#features">Features</a><a href="#phases">Phases</a><a href="#install">Install</a><a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a></div>
   <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="nav-cta">Get started &rarr;</a>
 </nav>
 <section class="hero">
   <div class="badge"><i class="ti ti-sparkles"></i>Open source &mdash; free forever</div>
-  <h1>Your personal <span>AI operating system</span></h1>
-  <p>A self-hosted assistant that remembers you, learns from your notes, manages your tasks, and acts on your behalf &mdash; built in Python, runs on your machine.</p>
+  <h1>Meet <span>Mandy</span>, your personal AI assistant</h1>
+  <p>A self-hosted AI assistant that remembers you, learns from your notes, manages your tasks, researches topics for you, and acts on your behalf &mdash; built in Python, runs on your machine.</p>
   <div class="hero-btns">
     <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="btn-primary"><i class="ti ti-brand-github"></i>Get started free</a>
     <a href="#features" class="btn-secondary"><i class="ti ti-list"></i>See features</a>
   </div>
   <div class="install-box" id="install">
-    <code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git &amp;&amp; python setup.py</code>
+    <code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git && python setup.py</code>
     <button class="copy-btn" onclick="navigator.clipboard.writeText('git clone https://github.com/Manav-Patil-10/personal-ai-os.git && python setup.py');this.textContent='Copied!'">Copy</button>
   </div>
 </section>
@@ -101,31 +101,31 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
 </div>
 <section class="section" id="features">
   <div class="section-tag">Features</div>
-  <h2>Everything your AI assistant should do</h2>
+  <h2>Everything Mandy can do for you</h2>
   <p>Each phase adds a new capability on top of the last.</p>
   <div class="features-grid">
-    <div class="feature-card"><i class="ti ti-database" style="color:#534AB7"></i><h3>Persistent memory</h3><p>Remembers every conversation across sessions using SQLite.</p></div>
-    <div class="feature-card"><i class="ti ti-file-text" style="color:#1D9E75"></i><h3>Personal knowledge base</h3><p>Ask questions about your own notes powered by RAG.</p></div>
-    <div class="feature-card"><i class="ti ti-checkbox" style="color:#BA7517"></i><h3>Natural language tasks</h3><p>Manage your to-do list through conversation.</p></div>
+    <div class="feature-card"><i class="ti ti-database" style="color:#534AB7"></i><h3>Persistent memory</h3><p>Mandy remembers every conversation across sessions using SQLite.</p></div>
+    <div class="feature-card"><i class="ti ti-file-text" style="color:#1D9E75"></i><h3>Personal knowledge base</h3><p>Ask Mandy questions about your own notes powered by RAG.</p></div>
+    <div class="feature-card"><i class="ti ti-checkbox" style="color:#BA7517"></i><h3>Task manager</h3><p>Manage your to-do list through natural conversation.</p></div>
+    <div class="feature-card"><i class="ti ti-world-search" style="color:#1D9E75"></i><h3>Web research</h3><p>Mandy searches the web, summarizes findings, and saves them to your notes automatically.</p></div>
     <div class="feature-card"><i class="ti ti-arrows-split-2" style="color:#534AB7"></i><h3>Multi-agent orchestration</h3><p>Routes requests to the right specialist agent automatically.</p></div>
-    <div class="feature-card"><i class="ti ti-world-search" style="color:#1D9E75"></i><h3>Web search</h3><p>Automatically searches the web for current information.</p></div>
     <div class="feature-card"><i class="ti ti-lock" style="color:#D85A30"></i><h3>Privacy mode</h3><p>Fully local model with one flag. Zero data leaves your machine.</p></div>
     <div class="feature-card"><i class="ti ti-calendar" style="color:#BA7517"></i><h3>Proactive briefings</h3><p>Daily briefing generated automatically every morning.</p></div>
-    <div class="feature-card"><i class="ti ti-layout-dashboard" style="color:#534AB7"></i><h3>Web dashboard</h3><p>Clean browser interface. No terminal required.</p></div>
+    <div class="feature-card"><i class="ti ti-layout-dashboard" style="color:#534AB7"></i><h3>Desktop app</h3><p>Clean desktop interface. No terminal required.</p></div>
   </div>
 </section>
 <section class="phases-section" id="phases">
   <div class="phases-inner">
     <div class="section-tag">Built in phases</div>
-    <h2>From zero to multi-agent system</h2>
+    <h2>From zero to full AI assistant</h2>
     <div class="phases-grid">
       <div class="phase-card"><div class="phase-num">PHASE 0</div><h3>CLI assistant</h3><p>Persona switching via system prompts</p></div>
-      <div class="phase-card"><div class="phase-num">PHASE 1</div><h3>Memory</h3><p>Persistent cross-session memory with SQLite</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 1</div><h3>Memory</h3><p>Persistent cross-session memory</p></div>
       <div class="phase-card"><div class="phase-num">PHASE 2</div><h3>RAG</h3><p>Ask questions about your own notes</p></div>
       <div class="phase-card"><div class="phase-num">PHASE 3</div><h3>Tool-calling</h3><p>Natural language task management</p></div>
       <div class="phase-card"><div class="phase-num">PHASE 4</div><h3>Orchestration</h3><p>Multi-agent intent routing</p></div>
       <div class="phase-card"><div class="phase-num">PHASE 5</div><h3>Proactive</h3><p>Automatic daily briefings</p></div>
-      <div class="phase-card"><div class="phase-num">PHASE 6</div><h3>Dashboard</h3><p>Web interface for everything</p></div>
+      <div class="phase-card"><div class="phase-num">PHASE 6</div><h3>Dashboard</h3><p>Web and desktop interface</p></div>
       <div class="phase-card"><div class="phase-num">PHASE 7</div><h3>Privacy</h3><p>Local model option with threat model</p></div>
     </div>
   </div>
@@ -134,18 +134,18 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
   <div class="section-tag">Get started</div>
   <h2>Up and running in 3 steps</h2>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><div><h3>Clone the repo</h3><p>Download the project to your computer.</p><code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git</code></div></div>
-    <div class="step"><div class="step-num">2</div><div><h3>Run the setup wizard</h3><p>Installs all dependencies and sets up your API key.</p><code>python setup.py</code></div></div>
-    <div class="step"><div class="step-num">3</div><div><h3>Start using it</h3><p>Launch the web dashboard.</p><code>python app.py</code></div></div>
+    <div class="step"><div class="step-num">1</div><div><h3>Clone the repo</h3><p>Download Mandy to your computer.</p><code>git clone https://github.com/Manav-Patil-10/personal-ai-os.git</code></div></div>
+    <div class="step"><div class="step-num">2</div><div><h3>Run setup</h3><p>Installs all dependencies and sets up your API key.</p><code>python setup.py</code></div></div>
+    <div class="step"><div class="step-num">3</div><div><h3>Start Mandy</h3><p>Launch the desktop app or web dashboard.</p><code>python desktop_app.py</code></div></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Ready to build your own AI OS?</h2>
+  <h2>Ready to meet Mandy?</h2>
   <p>Free, open source, runs on your machine. Get started in 3 commands.</p>
   <a href="https://github.com/Manav-Patil-10/personal-ai-os" class="cta-btn"><i class="ti ti-brand-github"></i>Clone on GitHub &rarr;</a>
 </section>
 <footer>
-  <div class="logo"><i class="ti ti-brain"></i>Personal AI OS</div>
+  <div class="logo"><i class="ti ti-brain"></i>Mandy</div>
   <div class="footer-links"><a href="https://github.com/Manav-Patil-10/personal-ai-os">GitHub</a><a href="https://github.com/Manav-Patil-10/personal-ai-os/blob/main/README.md">Docs</a><a href="https://github.com/Manav-Patil-10/personal-ai-os/issues">Issues</a></div>
   <div class="footer-text">Built by <a href="https://github.com/Manav-Patil-10">Manav Patil</a></div>
 </footer>
